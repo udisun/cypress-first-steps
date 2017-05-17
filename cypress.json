@@ -1,0 +1,8 @@
+{
+  "projectId": "fbjum4",
+  "baseUrl": "https://devil.zengaming.com",
+  "chromeWebSecurity": false,
+  "env": {
+    "sub_domain": "devil"
+  }
+}

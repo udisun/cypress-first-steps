@@ -1,0 +1,45 @@
+{
+  "name": "end2end-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "cheerio": "^0.22.0",
+    "cypress-cli": "^0.13.1",
+    "dirty-chai": "^1.2.2",
+    "lorem-ipsum": "^1.0.4",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.13.3",
+    "snyk": "^1.30.0"
+  },
+  "scripts": {
+    "precommit": "npm run lint:staged",
+    "test:cypress": "cypress run --record --key 3ab07063-338c-4f9d-99b5-d187b666dd2d",
+    "test:snyk": "snyk test",
+    "test": "npm run-script test:snyk && npm run-script test:cypress",
+    "test:lint": "eslint --cache --ext .js .",
+    "lint:staged": "files=`git diff --staged --diff-filter=AM --name-only | grep .js$ | tr '\n' ' '`; if [[ $files = \"\" ]]; then exit 0; fi; eslint $files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengamingx/end2end-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zengamingx/end2end-testing/issues"
+  },
+  "homepage": "https://github.com/zengamingx/end2end-testing#readme"
+}
